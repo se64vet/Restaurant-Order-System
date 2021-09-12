@@ -1,0 +1,7 @@
+.menu{
+    position: relative;
+}
+.menuItem{
+    width: fit-content;
+    text-align: center;
+}

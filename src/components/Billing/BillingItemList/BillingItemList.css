@@ -1,0 +1,14 @@
+.table-wrapper{
+    max-height: 30%;
+    overflow-y: scroll;
+}
+.table-wrapper::-webkit-scrollbar {
+    width: 2px;
+  }
+   
+  
+   
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 1em;
+  }
