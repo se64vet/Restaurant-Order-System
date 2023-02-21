@@ -63,7 +63,7 @@ const MenuItem = ({item, addItem}) => {
         handleOnChangeNote={handleOnChangeNote} 
         handleOnChangeQty={handleOnChangeQty} />}
         <div className='text-center' onClick={()=> setPopUp(!popUp)}>
-            <img src={`https://source.unsplash.com/collection/3418024/130x130/?sig=${Math.floor(Math.random() *20)}`} alt="food" />
+            <img src={process.env.PUBLIC_URL + '/assets' + item.imgUrl} alt="food" width={100} height={100} style={{objectFit: "cover", borderRadius: "10px"}}/>
             <h6 className='d-block'>{item.name}</h6>
             <p className='d-block'>{`$${item.price.toFixed(2)}`}</p>
         </div>

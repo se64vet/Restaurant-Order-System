@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Billing from './components/Billing/Billing';
@@ -24,9 +23,8 @@ function App() {
 
   return (
     <div className="container pos">
-      <div className="row text-center banner mb-3">
-          <h3>Vfresh POS</h3>
-          <p>Restaurant slogan goes here</p>
+      <div className="row text-center banner mb-3" style={{backgroundImage: `url(${process.env.PUBLIC_URL + './assets/4.jpg'})`}}>
+          <h3>BLUES LOUNGE</h3>
       </div>
 
       <div className= 'row main'>

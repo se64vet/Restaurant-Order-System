@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import MenuItem from './MenuItem/MenuItem'
 import './MenuStyles.css'
-import data from './../../data.json'
+import nData from './../../nData.json'
 const Menu = ({addItem}) => {
     
     
     return (
-        <div className='row menu justify-content-center'>
-            {data.map((x, i) =>
+        <div className='mt-5 row menu justify-content-center'>
+            {nData.map((x, i) =>
                  <div className="menuItem col-3" key={i} >
                       <MenuItem  item={x} addItem={addItem}/>
                  </div>

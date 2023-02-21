@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
+import {v4 as uuidv4} from 'uuid';
 import BillingItemList from './BillingItemList/BillingItemList'
 import './BillingStyle.css'
 
@@ -12,20 +13,23 @@ const CashPay = ({cashPay, setCashPay, subTotal})=>(
 const Billing = ({orderData, deleteItem, clearData}) => {
     const [payment, setPayment] = useState('')
     const [cashPay, setCashPay] = useState(0)
+    const [invoiceId, setInvoiceId] = useState()
     let subTotal = 0;
     orderData.forEach(item => {
         subTotal += parseFloat((item.price * item.qty));
     });
-    
-    
+
+    useEffect(()=>{
+        setInvoiceId(uuidv4()); 
+    },[])
 
     return (
         <div className='text-center d-flex flex-column align-items-center justify-content-around billing'>
             <div className="">
-            <h4>Restaurant Name</h4>
-            <h6>123 Name st.</h6>
-            <h6>City, State</h6>
-            <p>Invoice# 9999</p>
+            <h4>Blues Lounge</h4>
+            <h6>3596 Dante St.</h6>
+            <h6>Knoxville, Tennessee</h6>
+            <p>Invoice# {invoiceId && invoiceId.slice(-6)}</p>
             </div>
 
             <BillingItemList orderData = {orderData} deleteItem={deleteItem}/>
