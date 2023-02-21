@@ -43,9 +43,6 @@ const MenuItem = ({item, addItem}) => {
     const [popUp, setPopUp] =  useState(false)
     const [qty, setQty] = useState(1)
     const [note, setNote] = useState("")
-    const handleSubmit = (e)=>{
-        e.preventDefault()
-    }
     const handleOnChangeQty = event=>setQty(event.target.value)
     const handleOnChangeNote = event=> setNote(event.target.value) 
     

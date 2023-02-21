@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import MenuItem from './MenuItem/MenuItem'
 import './MenuStyles.css'
 import nData from './../../nData.json'
